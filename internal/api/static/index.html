@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orchid Inspector</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Orchid</p>
+        <h1>Run Inspector</h1>
+      </div>
+      <div class="topbar-actions">
+        <span id="connection-pill" class="pill pill-muted">connecting</span>
+        <button id="refresh-button" class="button">Refresh</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel sidebar">
+        <div class="panel-header">
+          <h2>Runs</h2>
+          <span id="run-count" class="meta">0</span>
+        </div>
+        <div id="runs-list" class="runs-list"></div>
+      </aside>
+
+      <section class="content">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h2 id="run-title">Select a run</h2>
+              <p id="run-subtitle" class="muted">The inspector polls the API and replay view automatically.</p>
+            </div>
+            <div id="run-actions" class="panel-actions"></div>
+          </div>
+          <div id="summary-grid" class="summary-grid empty-state">No run selected.</div>
+        </section>
+
+        <section class="grid grid-two">
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Workflow Graph</h2>
+              <span id="graph-caption" class="meta">replay-backed</span>
+            </div>
+            <div id="graph-panel" class="graph-panel empty-state">Run replay will render here.</div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Replay</h2>
+              <span id="replay-pill" class="pill pill-muted">unknown</span>
+            </div>
+            <div id="replay-panel" class="replay-panel empty-state">No replay data loaded.</div>
+          </section>
+        </section>
+
+        <section class="grid grid-two">
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Tasks</h2>
+            </div>
+            <div id="tasks-table" class="table-shell empty-state">No tasks yet.</div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2>History</h2>
+            </div>
+            <div id="history-panel" class="history-panel empty-state">No history yet.</div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
